@@ -1,11 +1,7 @@
-<div>
-  <mat-card
-    *ngFor="let film of filmsList"
-    style="background-color: #000000;
-          font-family: 'Comic Sans Ms';
-          width: 200px;
-          color:white;"
-  >
+<div class="eo">
+  <h1 style="margin-left: 35%; color: yellow">Star Wars</h1>
+  <div>
+  <mat-card *ngFor="let film of filmsList" class="example-card">
     <h1>{{ film.title }}</h1>
     <img
       [src]="getPhotoUrl(film)"
@@ -13,11 +9,13 @@
       onerror="this.onerror = null; this.src = 'https:\/\/starwars-visualguide.com/assets/img/placeholder.jpg'"
     />
   </mat-card>
-
+</div>
+<div>
   <span
   [ngStyle]="{ 'align-self': 'center', 'text-align': 'start' }"
   *ngFor="let in of counter(); let i = index"
   ><button (click)="getFilmsPage(i + 1)">{{ i + 1 }}</button
   >&nbsp;</span>
+</div>
 </div>
 

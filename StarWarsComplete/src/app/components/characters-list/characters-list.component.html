@@ -1,22 +1,32 @@
-<div>
-  <mat-card
-    *ngFor="let character of charactersList"
-    style="background-color: #000000;
-          font-family: 'Comic Sans Ms';
-          width: 200px;
-          color:white;"
-  >
-    <h1>{{ character.name }}</h1>
-    <img
-      [src]="getPhotoUrl(character.url)"
-      width="200px"
-      onerror="this.onerror = null; this.src = 'https:\/\/starwars-visualguide.com/assets/img/placeholder.jpg'"
-    />
-  </mat-card>
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Personajes</title>
+  </head>
+  <body>
+    <h1 style="margin-left: 35%; color: yellow">Star Wars</h1>
+    <div>
+      <span *ngFor="let in of counter(); let i = index"
+        ><button (click)="getCharactersPage(i + 1)">{{ i + 1 }}</button></span
+      >
+    </div>
+    <div>
+      <mat-card class="example-card" *ngFor="let character of charactersList">
+        <mat-card-header>
+          <mat-card-title>{{ character.name }}</mat-card-title>
+        </mat-card-header>
+        <img
+          mat-card-image
+          width="250px"
+          height="300px"
+          [src]="getPhotoUrl(character)"
+          alt="Star Wars"
+        />
+      </mat-card>
 
-  <span
-  [ngStyle]="{ 'align-self': 'center', 'text-align': 'start' }"
-  *ngFor="let in of counter(); let i = index"
-  ><button (click)="getCharactersPage(i + 1)">{{ i + 1 }}</button
-  >&nbsp;</span>
-</div>
+    </div>
+  </body>
+</html>
