@@ -1,22 +1,29 @@
-<div>
-  <mat-card
-    *ngFor="let planet of planetList"
-    style="background-color: #000000;
-          font-family: 'Comic Sans Ms';
-          width: 200px;
-          color:white;"
-  >
-    <h1>{{ planet.name }}</h1>
-    <img
-      [src]="getUrlImagen(planet.url)"
-      width="200px"
-      onerror="this.onerror = null; this.src = 'https:\/\/starwars-visualguide.com/assets/img/placeholder.jpg'"
-    />
-  </mat-card>
-
-  <span
-  [ngStyle]="{ 'align-self': 'center', 'text-align': 'start' }"
-  *ngFor="let in of counter(); let i = index"
-  ><button (click)="getPlanetPage(i + 1)">{{ i + 1 }}</button
-  >&nbsp;</span>
+<div class="eo">
+  <div>
+    <mat-card
+      class="example-card"
+      *ngFor="let planet of planetList"
+      style="
+        background-color: #000000;
+        font-family: 'Comic Sans Ms';
+        width: max-content;
+        color: white;
+      "
+    >
+      <h1>{{ planet.name }}</h1>
+      <img
+        [src]="getUrlImagen(planet.url)"
+        width="350px"
+        height="350px"
+        onerror="this.onerror = null; this.src = 'https:\/\/starwars-visualguide.com/assets/img/placeholder.jpg'"
+      />
+    </mat-card>
+  </div>
+  <div>
+    <span
+      [ngStyle]="{ 'align-self': 'center', 'text-align': 'start' }"
+      *ngFor="let in of counter(); let i = index"
+      ><button (click)="getPlanetPage(i + 1)">{{ i + 1 }}</button>&nbsp;</span
+    >
+  </div>
 </div>

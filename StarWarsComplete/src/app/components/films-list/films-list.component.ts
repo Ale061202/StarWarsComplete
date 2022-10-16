@@ -31,7 +31,7 @@ export class FilmsComponent implements OnInit {
 
   getPhotoUrl(films : Films){
     let id = films.url.split("/").reverse()[1];
-    return `https://starwars-visualguide.com/assets/img/species/${id}.jpg`
+    return `https://starwars-visualguide.com/assets/img/films/${id}.jpg`
   }
 
 }
