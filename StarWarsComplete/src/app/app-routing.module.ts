@@ -6,6 +6,7 @@ import { SpeciesComponent } from './components/species-list/species-list.compone
 import { PlanetsListComponent } from './components/planets-list/planets-list.component';
 import { StarshipListComponent } from './components/starship-list/starship-list.component';
 import { VehiclesListComponent } from './components/vehicles-list/vehicles-list.component';
+import { PgPrincipalComponent } from './components/pg-principal/pg-principal.component';
 
 const routes: Routes = [
   {path: 'planets-list', component: PlanetsListComponent,pathMatch:'full'},
@@ -14,7 +15,8 @@ const routes: Routes = [
   {path: 'films-list', component:FilmsComponent,pathMatch:'full'},
   {path: 'characters-list', component:CharactersListComponent,pathMatch:'full'},
   {path: 'species-list',component:SpeciesComponent,pathMatch:'full'},
-  {path: '',redirectTo:'planets-list',pathMatch:'full'}
+  {path: 'pgPrincipal', component: PgPrincipalComponent,pathMatch:'full'},
+  {path: '',redirectTo:'pgPrincipal',pathMatch:'full'}
 
 ];
 
