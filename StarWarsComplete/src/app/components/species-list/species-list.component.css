@@ -1,10 +1,5 @@
-.example-card {
-  width: 300px;
-  height: 600px;
-  float: left;
-  padding-left: 2%;
-}
+.wrapper {
+  display: "flex" !important;
+  flex-direction:"row" !important;
 
-html {
-  background-color: black;
 }
