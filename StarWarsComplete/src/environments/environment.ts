@@ -5,7 +5,9 @@
 export const environment = {
   production: false,
   apiBaseUrl: 'https://swapi.dev/api',
+
 };
+
 
 /*
  * For easier debugging in development mode, you can import the following file
