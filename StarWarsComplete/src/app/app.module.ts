@@ -10,9 +10,6 @@ import { MaterialImportsModule } from './modules/material-imports/material-impor
 import { FilmsComponent } from './components/films-list/films-list.component';
 import { SpeciesComponent } from './components/species-list/species-list.component';
 import { VehiclesListComponent } from './components/vehicles-list/vehicles-list.component';
-import { PlanetsListComponent } from './planets-list/planets-list.component';
-import { HttpClientModule } from '@angular/common/http';
-import { MaterialImportsModule } from './material-imports/materialimports';
 import { AppRoutingModule } from './app-routing.module';
 
 
