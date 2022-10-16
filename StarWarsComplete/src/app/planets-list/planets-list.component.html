@@ -1,19 +1,22 @@
-<div fxLayout="row" fxLayoutAlign="space-around center" fxFlex="100">
+<div>
   <mat-card
-    fxFlex="20"
     *ngFor="let planet of planetList"
-    style="
-      background-color: #000000;
-      font-family: 'Comic Sans Ms';
-      width: 200px;
-      color: white;
-    "
+    style="background-color: #000000;
+          font-family: 'Comic Sans Ms';
+          width: 200px;
+          color:white;"
   >
-    <p>{{ planet.name }}</p>
+    <h1>{{ planet.name }}</h1>
     <img
       [src]="getUrlImagen(planet.url)"
       width="200px"
       onerror="this.onerror = null; this.src = 'https:\/\/starwars-visualguide.com/assets/img/placeholder.jpg'"
     />
   </mat-card>
+
+  <span
+  [ngStyle]="{ 'align-self': 'center', 'text-align': 'start' }"
+  *ngFor="let in of counter(); let i = index"
+  ><button (click)="getPlanetPage(i + 1)">{{ i + 1 }}</button
+  >&nbsp;</span>
 </div>

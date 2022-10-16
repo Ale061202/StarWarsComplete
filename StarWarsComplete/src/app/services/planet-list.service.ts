@@ -12,7 +12,7 @@ export class PlanetListService {
   constructor(private http:HttpClient) {
   }
 
-  public getPlanets(): Observable<PlanetsResponse>{
-    return this.http.get<PlanetsResponse>(`${environment.apiBaseUrl}/planets/`);
+  public getPlanets(page: number): Observable<PlanetsResponse>{
+    return this.http.get<PlanetsResponse>(`${environment.apiBaseUrl}/planets?page=${page}`);
   }
 }

@@ -10,12 +10,12 @@ import { PlanetListService } from '../services/planet-list.service';
 export class PlanetsListComponent implements OnInit {
   img: String = '';
   planetList: Planet[] = [];
+  numPages = 0;
   constructor(private planetService: PlanetListService) { }
 
   ngOnInit(): void {
-    this.planetService.getPlanets().subscribe((resp) => {
-      this.planetList = resp.results;
-    });
+
+    this.getPlanetPage(1);
   }
   getUrlImagen(url: string) {
     let id = url.split('/')[5];
@@ -24,5 +24,14 @@ export class PlanetsListComponent implements OnInit {
     return this.img;
 
   }
+  getPlanetPage(page: number) {
+    this.planetService.getPlanets(page).subscribe(resp => {
+      this.planetList = resp.results;
+      this.numPages = Math.ceil(resp.count / 10);
+    });
+  }
 
+  counter() {
+    return new Array(this.numPages);
+  }
 }

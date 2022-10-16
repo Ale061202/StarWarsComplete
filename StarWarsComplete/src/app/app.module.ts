@@ -5,7 +5,8 @@ import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { PlanetsListComponent } from './planets-list/planets-list.component';
 import { HttpClientModule } from '@angular/common/http';
-import { MaterialImportsModule } from './module-imports/materialimports';
+import { MaterialImportsModule } from './material-imports/materialimports';
+
 
 @NgModule({
   declarations: [
