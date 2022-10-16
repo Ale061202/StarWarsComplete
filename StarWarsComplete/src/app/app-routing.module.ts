@@ -10,7 +10,7 @@ import { PlanetsListComponent } from './planets-list/planets-list.component';
 
 const routes: Routes = [
   {path: 'planets-list', component: PlanetsListComponent,pathMatch:'full'},
-  {path: 'films-list', component: FilmsComponent,pathMatch:'full'},
+  {path: 'film-list', component: FilmsComponent,pathMatch:'full'},
   {path: 'characters-list', component: CharactersListComponent,pathMatch:'full'},
   {path: 'pgPrincipal', component: PgPrincipalComponent,pathMatch:'full'},
   {path: 'starship-list',component:StarshipListComponent,pathMatch:'full'},

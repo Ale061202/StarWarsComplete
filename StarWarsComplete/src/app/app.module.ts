@@ -12,12 +12,17 @@ import { AppRoutingModule } from './app-routing.module';
 import { PgPrincipalComponent } from './components/pg-principal/pg-principal.component';
 import { VehiclesListComponent } from './components/vehicles-list/vehicles-list.component';
 import { SpeciesComponent } from './components/species-list/species-list.component';
+import { FilmsComponent } from './components/films-list/films-list.component';
+import { CharactersListComponent } from './components/characters-list/characters-list.component';
 
 
 @NgModule({
   declarations: [
     AppComponent,
     PlanetsListComponent,
+    FilmsComponent,
+    SpeciesComponent,
+    CharactersListComponent,
     StarshipListComponent,
     PlanetsListComponent,
     PgPrincipalComponent,
