@@ -13,6 +13,7 @@ import { SpeciesComponent } from './components/species-list/species-list.compone
 import { FilmsComponent } from './components/films-list/films-list.component';
 import { CharactersListComponent } from './components/characters-list/characters-list.component';
 import { MaterialImportsModule } from './modules/material-imports.interface';
+import { HttpClientModule } from '@angular/common/http';
 
 
 @NgModule({
@@ -23,18 +24,17 @@ import { MaterialImportsModule } from './modules/material-imports.interface';
     SpeciesComponent,
     CharactersListComponent,
     StarshipListComponent,
-    PlanetsListComponent,
     PgPrincipalComponent,
-    PlanetsListComponent,
     VehiclesListComponent,
-    SpeciesComponent
+
 
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
-    MaterialImportsModule
+    MaterialImportsModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]
