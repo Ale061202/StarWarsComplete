@@ -3,22 +3,20 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { MaterialImportsModule } from './modules/material-imports/material-imports.module';
-import { CharactersListComponent } from './components/characters-list/characters-list.component';
-import { FilmsListComponent } from './components/films-list/films-list.component';
-import { SpeciesListComponent } from './components/species-list/species-list.component';
+import { PlanetsListComponent } from './planets-list/planets-list.component';
+import { HttpClientModule } from '@angular/common/http';
+import { MaterialImportsModule } from './module-imports/materialimports';
 
 @NgModule({
   declarations: [
     AppComponent,
-    CharactersListComponent,
-    FilmsListComponent,
-    SpeciesListComponent
+    PlanetsListComponent
   ],
   imports: [
     BrowserModule,
     BrowserAnimationsModule,
-    MaterialImportsModule,
+    HttpClientModule,
+    MaterialImportsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
