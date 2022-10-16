@@ -7,19 +7,25 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { FilmsComponent } from './components/films-list/films-list.component';
 import { SpeciesComponent } from './components/species-list/species-list.component';
 import { StarshipListComponent } from './components/starship-list/starship-list.component';
+import { PlanetsListComponent } from './planets-list/planets-list.component';
+import { HttpClientModule } from '@angular/common/http';
+import { AppRoutingModule } from './app-routing.module';
+
 
 @NgModule({
   declarations: [
     AppComponent,
     FilmsComponent,
     SpeciesComponent,
-    StarshipListComponent
+    StarshipListComponent,
+    PlanetsListComponent
   ],
   imports: [
     BrowserModule,
+    AppRoutingModule,
     BrowserAnimationsModule,
-    MaterialImportsModule,
-    AppRoutingModule
+    HttpClientModule,
+    MaterialImportsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
