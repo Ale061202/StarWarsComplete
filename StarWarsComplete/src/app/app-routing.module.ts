@@ -1,8 +1,8 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
+import { PlanetsListComponent } from './components/planets-list/planets-list.component';
 import { StarshipListComponent } from './components/starship-list/starship-list.component';
 import { VehiclesListComponent } from './components/vehicles-list/vehicles-list.component';
-import { PlanetsListComponent } from './planets-list/planets-list.component';
 
 const routes: Routes = [
   {path: 'planets-list', component: PlanetsListComponent,pathMatch:'full'},
