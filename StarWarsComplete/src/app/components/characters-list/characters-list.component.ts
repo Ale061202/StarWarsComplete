@@ -30,6 +30,6 @@ export class CharactersListComponent implements OnInit {
 
   getPhotoUrl(characters: Characters) {
     let id = characters.url.split('/').reverse()[1];
-    return `https://starwars-visualguide.com/assets/img/species/${id}.jpg`;
+    return `https://starwars-visualguide.com/assets/img/characters/${id}.jpg`;
   }
 }
