@@ -10,6 +10,7 @@ import { StarshipListComponent } from './components/starship-list/starship-list.
 import { PlanetsListComponent } from './planets-list/planets-list.component';
 import { HttpClientModule } from '@angular/common/http';
 import { AppRoutingModule } from './app-routing.module';
+import { PgPrincipalComponent } from './components/pg-principal/pg-principal.component';
 
 
 @NgModule({
@@ -18,7 +19,8 @@ import { AppRoutingModule } from './app-routing.module';
     FilmsComponent,
     SpeciesComponent,
     StarshipListComponent,
-    PlanetsListComponent
+    PlanetsListComponent,
+    PgPrincipalComponent
   ],
   imports: [
     BrowserModule,
