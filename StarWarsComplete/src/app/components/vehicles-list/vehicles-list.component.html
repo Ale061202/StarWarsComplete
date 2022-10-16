@@ -1,0 +1,22 @@
+<div>
+  <mat-card
+    *ngFor="let vehicle of vehiclesList"
+    style="background-color: #000000;
+          font-family: 'Comic Sans Ms';
+          width: 200px;
+          color:white;"
+  >
+    <h1>{{ vehicle.name }}</h1>
+    <img
+      [src]="getUrlImagen(vehicle.url)"
+      width="200px"
+      onerror="this.onerror = null; this.src = 'https:\/\/starwars-visualguide.com/assets/img/placeholder.jpg'"
+    />
+  </mat-card>
+
+  <span
+  [ngStyle]="{ 'align-self': 'center', 'text-align': 'start' }"
+  *ngFor="let in of counter(); let i = index"
+  ><button (click)="getVehiclesPage(i + 1)">{{ i + 1 }}</button
+  >&nbsp;</span>
+</div>
